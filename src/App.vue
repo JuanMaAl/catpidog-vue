@@ -1,16 +1,11 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue';
+
 </script>
 
 <template>
   <header>
-    <div>
-
-      <nav>
-        <RouterLink>Inicio</RouterLink>
-        <RouterLink to="/tipos-de-mascotas">Tipos de Mascotas</RouterLink>
-      </nav>
-    </div>
+    <NavBar></NavBar>
   </header>
 
   <RouterView />

@@ -2,7 +2,7 @@
     <h1>Tipos de Mascotas</h1>
     <ol>
         <li v-for="tipo in tiposDeMascotas" :key="tipo.id">
-            {{ tipo.nombre }}
+            {{ tipo.nombre }} {{ tipo.id }}
         </li>
     </ol>
     <div v-if="loading">Cargando tipos de mascotas...</div>
