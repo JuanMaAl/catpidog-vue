@@ -7,6 +7,8 @@
 
 </template>
 
+<!--ZONA DEL SCRIPT -->
+
 <script setup>
 import PicturesCarousel from '@/components/PicturesCarousel.vue'
 import { ref, onMounted } from 'vue'
@@ -41,7 +43,3 @@ onMounted(() => {
     cargarTiposDeMascotas()
 })
 </script>
-
-<style scoped>
-
-</style>

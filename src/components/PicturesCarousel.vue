@@ -44,7 +44,7 @@
   </template>
   
   <script setup>
-  import { defineProps } from 'vue';
+  //import { defineProps } from 'vue';
 
   // Prop name matches what's passed from parent component
   defineProps({
