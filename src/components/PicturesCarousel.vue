@@ -1,6 +1,6 @@
 <template>
     <!-- Carousel -->
-    <div id="demo" class="carousel slide custom-carousel" data-bs-ride="carousel">
+    <div id="demo" class="carousel slide custom-carousel mt-4" data-bs-ride="carousel">
       <!-- The slideshow/carousel -->
       <div class="carousel-inner">
         <div 
@@ -10,8 +10,9 @@
           :class="{ active: index === 0 }">
           <h2 class="text-center">{{ tipo.nombre }}</h2>
           <div class="image-container">
-            <img :src="getImagePath(tipo.id)" :alt="tipo.nombre" class="carousel-image">
+            <img :src="tipo.imageSrc" :alt="tipo.altText" class="carousel-image">
           </div>
+          <p class="text-center">{{ tipo.descripcion }}</p>
         </div>
       </div>
   
@@ -44,7 +45,7 @@
   
   <script setup>
   import { defineProps } from 'vue';
-  
+
   // Prop name matches what's passed from parent component
   defineProps({
     tiposDeMascotas: {
@@ -53,17 +54,18 @@
       default: () => []
     }
   });
-  
-  // Function to build image path dynamically
+  /*
+  //Function to build image path dynamically
   const getImagePath = (tipoId) => {
     return new URL(`../assets/tipos-mascotas/${tipoId}.png`, import.meta.url).href;
   };
+  */
   </script>
   
   <style scoped>
   .custom-carousel {
     position: relative;
-    padding-bottom: 60px; /* Space for controls */
+    padding-bottom: 60px;
   }
   
   .image-container {

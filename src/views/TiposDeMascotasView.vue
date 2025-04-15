@@ -1,7 +1,10 @@
 <template>
-    <PicturesCarousel :tiposDeMascotas = "tiposDeMascotas"></PicturesCarousel>
+    <main>
+        <PicturesCarousel :tiposDeMascotas = "tiposDeMascotas"></PicturesCarousel>
     <div v-if="loading">Cargando tipos de mascotas...</div>
     <div v-if="error">Error al cargar los tipos de mascotas: {{ error }}</div>
+    </main>
+
 </template>
 
 <script setup>
@@ -14,21 +17,12 @@ const tiposDeMascotas = ref([])
 const loading = ref(true)
 const error = ref(null)
 
-//Credenciales de autenticación, solo para desarrollo
-const username = 'usuario'
-const password = 'user12345z'
-
 // Funcion para cargar los tipos de mascostas desde la API
 const cargarTiposDeMascotas = async () => {
     loading.value = true
 
     try {
-        const response = await axios.get('http://localhost:8080/api/tipos', {
-            auth: {
-                username: username,
-                password: password,
-            }
-        })
+        const response = await axios.get('http://localhost:8080/api/tipos')
         console.log(response.data)
         if (Array.isArray(response.data)) {
             tiposDeMascotas.value = response.data
