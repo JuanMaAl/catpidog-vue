@@ -1,15 +1,11 @@
 <template>
-    <h1>Tipos de Mascotas</h1>
-    <ol>
-        <li v-for="tipo in tiposDeMascotas" :key="tipo.id">
-            {{ tipo.nombre }} {{ tipo.id }}
-        </li>
-    </ol>
+    <PicturesCarousel :tiposDeMascotas = "tiposDeMascotas"></PicturesCarousel>
     <div v-if="loading">Cargando tipos de mascotas...</div>
     <div v-if="error">Error al cargar los tipos de mascotas: {{ error }}</div>
 </template>
 
 <script setup>
+import PicturesCarousel from '@/components/PicturesCarousel.vue'
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
