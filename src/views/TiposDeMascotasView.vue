@@ -1,8 +1,8 @@
 <template>
     <main>
         <PicturesCarousel :tiposDeMascotas = "tiposDeMascotas"></PicturesCarousel>
-    <div v-if="loading">Cargando tipos de mascotas...</div>
-    <div v-if="error">Error al cargar los tipos de mascotas: {{ error }}</div>
+    <div v-if="loading" class="text-center">Cargando tipos de mascotas...</div>
+    <div v-if="error" class="text-center">Error al cargar los tipos de mascotas: {{ error }}</div>
     </main>
 
 </template>
