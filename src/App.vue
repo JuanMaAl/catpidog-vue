@@ -7,12 +7,12 @@
     <header>
         <NavBar></NavBar>
     </header>
-  <main>
-    <RouterView />
-  </main>
-  <footer>
-    <FootBar></FootBar>
-  </footer>
+    <main>
+      <RouterView />
+    </main>
+    <footer>
+      <FootBar></FootBar>
+    </footer>
 
 </template>
 

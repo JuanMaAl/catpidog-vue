@@ -10,16 +10,17 @@
 <script setup>
 import PicturesCarousel from '@/components/PicturesCarousel.vue'
 import { ref, onMounted } from 'vue'
-import { cargarTiposDeMascotas } from '@/utils/cargarTipos'
+import { getPublicData } from '@/utils/getPublicData'
 //import axios from 'axios'
 
 // Variables reactivas para almacenar los datos, el estado de carga y los errores
 const tiposDeMascotas = ref([])
 const loading = ref(true)
 const error = ref(null)
+const url = "http://localhost:8080/api/tipos"
 
 //Llama a la funcion para cargar los datos cuando el componente se monta 
 onMounted(() => {
-    cargarTiposDeMascotas(tiposDeMascotas, loading, error)
+    getPublicData(tiposDeMascotas, loading, error, url)
 })
 </script>

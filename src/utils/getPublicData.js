@@ -1,15 +1,15 @@
 
 import axios from 'axios'
 
-export async function cargarTiposDeMascotas (tiposDeMascotas, loading, error) 
+export async function getPublicData (refs, loading, error, url) 
 {
     loading.value = true
 
     try {
-        const response = await axios.get('http://localhost:8080/api/tipos')
+        const response = await axios.get(url)
         console.log(response.data)
         if (Array.isArray(response.data)) {
-            tiposDeMascotas.value = response.data
+            refs.value = response.data
         } else {
             throw new Error('La respuesta no es un arreglo válido.')
         }
