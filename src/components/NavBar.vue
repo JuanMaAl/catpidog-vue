@@ -16,6 +16,11 @@ import { RouterLink } from 'vue-router'
     .nav-link {
         color: #E1EEBC;
         text-decoration: none;
+        transition: font-weight 0.2s ease;
+    }
+
+    .nav-link:hover {
+        font-weight: bold;
     }
 
 </style>
