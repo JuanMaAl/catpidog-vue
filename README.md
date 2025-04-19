@@ -1,35 +1,72 @@
-# catpidog-vue
+CATPIDOG-VUE
 
-This template should help get you started developing with Vue 3 in Vite.
+This template provides a starting point for developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+Recommended IDE Setup:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+VSCode + Volar (and disable Vetur).
 
-## Customize configuration
+Customize configuration:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+See Vite Configuration Reference.
 
-## Project Setup
+Project Setup:
 
-```sh
+Bash
+
 npm install
-```
+Compile and Hot-Reload for Development:
 
-### Compile and Hot-Reload for Development
+Bash
 
-```sh
 npm run dev
-```
+Compile and Minify for Production:
 
-### Compile and Minify for Production
+Bash
 
-```sh
 npm run build
-```
+Lint with ESLint:
 
-### Lint with [ESLint](https://eslint.org/)
+Bash
 
-```sh
 npm run lint
-```
+About:
+
+Frontend in Vue for the Catpidog API in Spring. Final project for the Front End Web Developer UAB course.
+
+Project Structure:
+
+assets: Contains project assets.
+
+components: Reusable Vue components.
+
+router: Vue router configuration.
+
+utils: Utility functions.
+
+views: Vue views (pages).
+
+App.vue: Main application component.
+
+main.js: Entry point for the Vue application.
+
+FootBar.vue: Footer component.
+
+MainTitle.vue: Main title component.
+
+MascotasCard.vue: Component for displaying pet cards.
+
+NavBar.vue: Navigation bar component.
+
+PicturesCarousel.vue: Carousel component for pet pictures.
+
+AboutView.vue: View for the "About" page.
+
+HomeView.vue: View for the home page.
+
+MascotasView.vue: View for displaying pets.
+
+TiposDeMascotasView.vue: View for displaying pet types.
+
+
+Fuentes y contenido relacionado
